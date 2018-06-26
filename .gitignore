@@ -3,3 +3,6 @@
 
 # GRADLE
 .gradle/
+
+# PROJECT
+*/out/
