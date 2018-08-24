@@ -7,7 +7,8 @@
 ## 安装
 
 到[官网](https://www.elastic.co/cn/products/elasticsearch)下载 ElasticSearch 并解压，然后运行 bin/elasticsearch (or bin\elasticsearch.bat on Windows)，在浏览器打开 `http://localhost:9200/` 查看是否运行。
-![elasticsearch](/images/elasticsearch.png)
+![elasticsearch]({{site.baseurl}}/elasticsearch.png)
+![elasticsearch]({{site.baseurl}}/images/elasticsearch.png)
 
 ## 可视化插件
 
@@ -22,7 +23,7 @@
 5. open `http://localhost:9100/`
 
 *未连接 ElasticSearch 时：*
-![elasticsearch-head-1](/images/elasticsearch-head-1.png)
+![elasticsearch-head-1]({{site.baseurl}}/images/elasticsearch-head-1.png)
 *已连接 ElasticSearch 时：*
 ![elasticsearch-head-2](/images/elasticsearch-head-2.png)
 
