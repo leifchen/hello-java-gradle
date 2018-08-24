@@ -29,4 +29,3 @@
 ## 与 SpringBoot 集成
 
 通过 Gradle 构建，添加 ElasticSearch 依赖项时，同时需要引进相关插件 transport-netty3-client 依赖项。
-[详见](/hello-elasticsearch/build.gradle)
