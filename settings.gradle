@@ -1,3 +1,5 @@
 rootProject.name = 'hello-java'
 include 'hello-thread'
 include 'hello-elasticsearch'
+include 'hello-proxy'
+
