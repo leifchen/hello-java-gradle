@@ -1,0 +1,9 @@
+dependencies {
+    // Spring
+    compile 'org.springframework:spring-core:5.1.0.RELEASE'
+    compile 'org.springframework:spring-context:5.1.0.RELEASE'
+
+    // Google Guice
+    compile 'com.google.inject:guice:4.2.1'
+    compile 'com.google.inject.extensions:guice-multibindings:4.2.1'
+}
