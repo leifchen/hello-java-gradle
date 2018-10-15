@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.0.4.RELEASE'
+        springBootVersion = '2.0.5.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -10,19 +10,8 @@ buildscript {
     }
 }
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
-
-group = 'com.chen'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
-}
-
 
 dependencies {
     // Web
@@ -31,10 +20,4 @@ dependencies {
     // Elastic Search
     compile('org.springframework.boot:spring-boot-starter-data-elasticsearch')
     compile('org.elasticsearch.plugin:transport-netty3-client:5.6.10')
-
-    // Lombok
-    compileOnly('org.projectlombok:lombok')
-
-    // Test
-    testCompile('org.springframework.boot:spring-boot-starter-test')
 }

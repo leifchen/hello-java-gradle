@@ -1,8 +1,9 @@
-# IDEA
+### IDEA ###
 .idea/
+*.iml
 
-# GRADLE
+### GRADLE ###
 .gradle/
 
-# PROJECT
+### PROJECT ###
 */out/
