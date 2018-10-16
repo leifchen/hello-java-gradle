@@ -9,7 +9,7 @@ package com.chen.guice.service;
 public interface BookService {
 
     /**
-     * 保存用户
+     * 保存
      */
     void save();
 }

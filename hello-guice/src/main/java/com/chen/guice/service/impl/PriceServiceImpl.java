@@ -14,6 +14,6 @@ public class PriceServiceImpl implements PriceService {
 
     @Override
     public BigDecimal getPrice() {
-        return BigDecimal.TEN;
+        return new BigDecimal("100");
     }
 }
