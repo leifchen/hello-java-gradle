@@ -1,0 +1,17 @@
+dependencies {
+    // Spring
+    implementation 'org.springframework:spring-context:5.1.2.RELEASE'
+
+    // Spring-JMS
+    implementation 'org.springframework:spring-jms:5.1.2.RELEASE'
+
+    // ActiveMQ
+    implementation ('org.apache.activemq:activemq-core:5.7.0'){
+        exclude group: 'org.springframework', module: 'spring-context'
+    }
+
+    // JMS
+    implementation 'javax.jms:javax.jms-api:2.0.1'
+
+    testImplementation 'org.springframework:spring-test:5.1.2.RELEASE'
+}
