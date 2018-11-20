@@ -4,5 +4,5 @@ include 'hello-elasticsearch'
 include 'hello-proxy'
 include 'hello-reflect'
 include 'hello-guice'
-include 'hello-jms'
+include 'hello-activemq'
 
