@@ -1,0 +1,44 @@
+spring:
+  # DB
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost/db_java?useSSL=false&characterEncoding=UTF-8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+  # JPA
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    open-in-view: false
+
+  # RabbitMQ
+  rabbitmq:
+    addresses: localhost:5672
+    username: guest
+    password: guest
+    virtual-host: /
+    connection-timeout: 15s
+    listener:
+      simple:
+        acknowledge-mode: manual
+        concurrency: 5
+        max-concurrency: 10
+        prefetch: 1
+    publisher-confirms: true
+    publisher-returns: true
+    template:
+      mandatory: true
+
+  # Jackson
+  jackson:
+    time-zone: GMT+8
+    default-property-inclusion: non_null
+  #    date-format: yyyy-MM-dd HH:mm:ss
+
+  output:
+    ansi:
+      enabled: always

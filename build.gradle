@@ -12,10 +12,14 @@ subprojects {
     }
 
     dependencies {
+        // Commons Util
+        implementation 'org.apache.commons:commons-lang3:3.8.1'
+        implementation 'commons-io:commons-io:2.6'
+
         // Lombok
         compileOnly 'org.projectlombok:lombok:1.18.2'
 
         // Junit
-        testCompile 'junit:junit:4.12'
+        testImplementation 'junit:junit:4.12'
     }
 }

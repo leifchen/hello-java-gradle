@@ -5,4 +5,5 @@ include 'hello-proxy'
 include 'hello-reflect'
 include 'hello-guice'
 include 'hello-activemq'
+include 'hello-rabbitmq'
 
