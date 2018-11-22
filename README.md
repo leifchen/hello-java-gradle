@@ -14,6 +14,4 @@
 
 [5] [Google Guice 依赖注入框架 ](https://blog.csdn.net/leifchen90/article/details/83071039)
 
-[6] [ActiveMQ 消息中间件](https://blog.csdn.net/leifchen90/article/details/84248762)
-
-[7] [RabbitMQ 消息中间件]()
+[6] [Java 消息中间件](https://blog.csdn.net/leifchen90/article/details/84248762)
