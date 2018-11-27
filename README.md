@@ -15,3 +15,5 @@
 [5] [Google Guice 依赖注入框架 ](https://blog.csdn.net/leifchen90/article/details/83071039)
 
 [6] [Java 消息中间件](https://blog.csdn.net/leifchen90/article/details/84248762)
+
+[7] [Java 生成二维码](https://blog.csdn.net/leifchen90/article/details/84566730)

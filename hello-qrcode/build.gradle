@@ -1,0 +1,8 @@
+dependencies {
+    // ZXing
+    implementation 'com.google.zxing:core:3.3.3'
+    implementation 'com.google.zxing:javase:3.3.3'
+
+    // QRCode
+    implementation fileTree(dir:'lib',include:['*.jar'])
+}

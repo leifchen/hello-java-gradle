@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR-Code</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.qrcode.min.js"></script>
+</head>
+<body>
+<div id="qrcode"></div>
+
+<script>
+    $('#qrcode').qrcode({width: 500, height: 500, text: "https://github.com/leifchen"});
+</script>
+</body>
+</html>
