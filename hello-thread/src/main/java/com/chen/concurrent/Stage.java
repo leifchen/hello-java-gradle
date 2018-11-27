@@ -1,7 +1,12 @@
 package com.chen.concurrent;
 
+import com.google.common.util.concurrent.ThreadFactoryBuilder;
+
+import java.util.concurrent.*;
+
 /**
  * Stage
+ *
  * @Author LeifChen
  * @Date 2018-06-25
  */
@@ -12,12 +17,18 @@ public class Stage {
 
         ArmyRunnable armyTaskOfWei = new ArmyRunnable();
         ArmyRunnable armyTaskOfShu = new ArmyRunnable();
-        Thread armyOfWei = new Thread(armyTaskOfWei, "魏军");
-        Thread armyOfShu = new Thread(armyTaskOfShu, "蜀军");
 
-        // 开始线程
-        armyOfWei.start();
-        armyOfShu.start();
+
+        ThreadFactory namedThreadFactory = new ThreadFactoryBuilder()
+                .setNameFormat("demo-pool-%d").build();
+        ExecutorService singleThreadPool = new ThreadPoolExecutor(1, 1,
+                0L, TimeUnit.MILLISECONDS,
+                new LinkedBlockingQueue<>(1024), namedThreadFactory, new ThreadPoolExecutor.AbortPolicy());
+
+        singleThreadPool.execute(()->{
+            new Thread(armyTaskOfWei, "魏军").start();
+            new Thread(armyTaskOfShu, "蜀军").start();
+        });
 
         try {
             Thread.sleep(50);
@@ -45,6 +56,8 @@ public class Stage {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        singleThreadPool.shutdown();
 
         System.out.println("三国演义结束。");
     }

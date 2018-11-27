@@ -1,9 +1,12 @@
 package com.chen.concurrent;
 
+import com.google.common.util.concurrent.ThreadFactoryBuilder;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.util.Scanner;
+import java.util.concurrent.*;
 
 /**
  * DaemonThread
@@ -38,9 +41,18 @@ public class DaemonThread implements Runnable {
 
     public static void main(String[] args) {
         DaemonThread daemonThread = new DaemonThread();
-        Thread thread = new Thread(daemonThread);
-        thread.setDaemon(true);
-        thread.start();
+
+        ThreadFactory namedThreadFactory = new ThreadFactoryBuilder()
+                .setNameFormat("demo-pool-%d").build();
+        ExecutorService singleThreadPool = new ThreadPoolExecutor(1, 1,
+                0L, TimeUnit.MILLISECONDS,
+                new LinkedBlockingQueue<>(1024), namedThreadFactory, new ThreadPoolExecutor.AbortPolicy());
+
+        singleThreadPool.execute(()->{
+            Thread thread =  new Thread(daemonThread);
+            thread.setDaemon(true);
+            thread.start();
+        });
 
         Scanner sc = new Scanner(System.in);
         sc.next();
