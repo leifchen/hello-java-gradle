@@ -19,7 +19,8 @@ public class EncoderUtilsTest {
         String ccBase64 = EncoderUtils.commonsCodecBase64(str);
         String bcBase64 = EncoderUtils.bouncyCastleBase64(str);
         System.out.println("Base64: " + EncoderUtils.jdkBase64(str));
-        Assert.assertEquals(jdkBase64, ccBase64, bcBase64);
+        Assert.assertEquals(jdkBase64, ccBase64);
+        Assert.assertEquals(jdkBase64, bcBase64);
     }
 
     @Test
@@ -28,7 +29,8 @@ public class EncoderUtilsTest {
         String ccMD5 = EncoderUtils.commonsCodecMD5(str);
         String bcMD5 = EncoderUtils.bouncyCastleMD5(str);
         System.out.println("MD5: " + EncoderUtils.jdkMD5(str));
-        Assert.assertEquals(jdkMD5, ccMD5, bcMD5);
+        Assert.assertEquals(jdkMD5, ccMD5);
+        Assert.assertEquals(jdkMD5, bcMD5);
     }
 
     @Test
@@ -38,7 +40,8 @@ public class EncoderUtilsTest {
         String bcSHA1 = EncoderUtils.bouncyCastleSHA1(str);
         System.out.println("SHA-1: " + EncoderUtils.jdkSHA1(str));
         System.out.println("SHA-224: " + EncoderUtils.bouncyCastleSHA224(str));
-        Assert.assertEquals(jdkSHA1, ccSHA1, bcSHA1);
+        Assert.assertEquals(jdkSHA1, ccSHA1);
+        Assert.assertEquals(jdkSHA1, bcSHA1);
     }
 
     @Test
@@ -47,6 +50,7 @@ public class EncoderUtilsTest {
         String ccHmacMD5 = EncoderUtils.commonsCodecHmacMD5(str);
         String bcHmacMD5 = EncoderUtils.bouncyCastleHmacMD5(str);
         System.out.println("HmacMD5: " + EncoderUtils.jdkHmacMD5(str));
-        Assert.assertEquals(jdkHmacMD5, ccHmacMD5, bcHmacMD5);
+        Assert.assertEquals(jdkHmacMD5, ccHmacMD5);
+        Assert.assertEquals(jdkHmacMD5, bcHmacMD5);
     }
 }
