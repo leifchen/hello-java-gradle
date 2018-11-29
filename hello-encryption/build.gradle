@@ -1,0 +1,4 @@
+dependencies {
+    implementation 'commons-codec:commons-codec:1.11'
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.60'
+}

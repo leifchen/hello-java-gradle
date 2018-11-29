@@ -17,3 +17,5 @@
 [6] [Java 消息中间件](https://blog.csdn.net/leifchen90/article/details/84248762)
 
 [7] [Java 生成二维码](https://blog.csdn.net/leifchen90/article/details/84566730)
+
+[8] [Java 的 Base64、消息摘要算法加密](https://blog.csdn.net/leifchen90/article/details/84635839)
