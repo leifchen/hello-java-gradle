@@ -1,6 +1,5 @@
 package com.chen.encryption.util;
 
-import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.codec.digest.HmacAlgorithms;
@@ -11,7 +10,6 @@ import org.bouncycastle.crypto.digests.SHA1Digest;
 import org.bouncycastle.crypto.macs.HMac;
 import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
-import sun.misc.BASE64Encoder;
 
 import javax.crypto.Mac;
 import javax.crypto.SecretKey;
@@ -20,44 +18,14 @@ import java.security.MessageDigest;
 import java.security.Security;
 
 /**
- * 加密工具类
+ * 消息摘要加密工具类
  *
  * @Author LeifChen
  * @Date 2018-11-29
  */
-public class EncoderUtils {
+public class MessageDigestUtils {
 
     static final String KEY = "aa";
-
-    /**
-     * 使用 JDK Base64 加密
-     *
-     * @param str 明文
-     * @return Base64 密文
-     */
-    public static String jdkBase64(String str) {
-        return new BASE64Encoder().encode(str.getBytes());
-    }
-
-    /**
-     * 使用 Commons Codec Base64 加密
-     *
-     * @param str 明文
-     * @return Base64 密文
-     */
-    public static String commonsCodecBase64(String str) {
-        return new String(Base64.encodeBase64(str.getBytes()));
-    }
-
-    /**
-     * 使用 Bouncy Castle Base64 加密
-     *
-     * @param str 明文
-     * @return Base64 密文
-     */
-    public static String bouncyCastleBase64(String str) {
-        return new String(org.bouncycastle.util.encoders.Base64.encode(str.getBytes()));
-    }
 
     /**
      * 使用 JDK MD5 加密
