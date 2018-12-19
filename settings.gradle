@@ -8,4 +8,5 @@ include 'hello-activemq'
 include 'hello-rabbitmq'
 include 'hello-qrcode'
 include 'hello-encryption'
+include 'hello-synchronized'
 
