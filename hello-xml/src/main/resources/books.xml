@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bookstore>
+    <book id="1">
+        <name>Java编程思想</name>
+        <year>2007</year>
+        <price>100</price>
+        <language>English</language>
+    </book>
+    <book id="2">
+        <name>Java并发编程的艺术</name>
+        <author>方腾飞 </author>
+        <year>2015</year>
+        <price>50</price>
+    </book>
+</bookstore>

@@ -1,0 +1,4 @@
+dependencies {
+    implementation 'org.jdom:jdom2:2.0.6'
+    implementation 'org.dom4j:dom4j:2.1.1'
+}

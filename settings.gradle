@@ -9,4 +9,5 @@ include 'hello-rabbitmq'
 include 'hello-qrcode'
 include 'hello-encryption'
 include 'hello-synchronized'
+include 'hello-xml'
 
