@@ -1,0 +1,10 @@
+apply plugin: 'war'
+
+dependencies {
+    // Servlet
+    implementation 'javax.servlet:javax.servlet-api:4.0.1'
+
+    //Spring
+    implementation 'org.springframework:spring-web:5.1.6.RELEASE'
+    implementation 'org.springframework:spring-webmvc:5.1.6.RELEASE'
+}
